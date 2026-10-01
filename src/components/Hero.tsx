@@ -98,7 +98,7 @@ export default function Hero() {
 {"\n"}  focus: [<span className="text-emerald-300">&quot;agents IA&quot;</span>, <span className="text-emerald-300">&quot;automatisation&quot;</span>],
 {"\n"}  stack: [<span className="text-emerald-300">&quot;TypeScript&quot;</span>, <span className="text-emerald-300">&quot;Python&quot;</span>],
 {"\n"}  formation: <span className="text-emerald-300">&quot;YNOV · IA &amp; Big Data&quot;</span>,
-{"\n"}  langues: [<span className="text-emerald-300">&quot;FR&quot;</span>, <span className="text-emerald-300">&quot;EN&quot;</span>],
+{"\n"}  langues: [<span className="text-emerald-300">&quot;FR&quot;</span>, <span className="text-emerald-300">&quot;EN&quot;</span>, <span className="text-emerald-300">&quot;PT&quot;</span>, <span className="text-emerald-300">&quot;DE&quot;</span>],
 {"\n"}  dispo: <span className="text-accent">true</span>,
 {"\n"}{"}"};
         </pre>

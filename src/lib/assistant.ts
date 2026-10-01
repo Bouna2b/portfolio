@@ -4,7 +4,18 @@
 
 type Intent = { id: string; keywords: string[]; answer: string };
 
+// L'ordre compte : en cas d'égalité de score, la première intention gagne.
+// Les sujets précis (international) passent donc avant les sujets généraux.
 const intents: Intent[] = [
+  {
+    id: "international",
+    keywords: [
+      "etranger", "international", "internationale", "chine", "china", "pekin", "beijing", "jiaotong",
+      "monaco", "monegasque", "monegasques", "abroad", "vecu", "voyage", "expatriation", "pays", "asie",
+    ],
+    answer:
+      "J'ai un parcours tourné vers l'international : j'ai passé l'année 2024-2025 à Pékin, à Beijing Jiaotong University, pour une certification en Software Engineering. Avant cela, j'ai travaillé à Monaco chez Syselio sur des projets pour des entreprises monégasques. Je suis bilingue en anglais, je parle aussi portugais et allemand, et je suis à l'aise dans un environnement multiculturel.",
+  },
   {
     id: "profil",
     keywords: ["qui", "toi", "presente", "profil", "resume", "parcours", "about"],
@@ -43,8 +54,9 @@ const intents: Intent[] = [
   },
   {
     id: "langues",
-    keywords: ["langue", "langues", "anglais", "english", "francais"],
-    answer: "Français langue maternelle, anglais bilingue — mon année en Chine m'a habitué à travailler dans un environnement international.",
+    keywords: ["langue", "langues", "anglais", "english", "francais", "portugais", "allemand", "german", "parles", "parle", "polyglotte"],
+    answer:
+      "Je parle quatre langues : français (langue maternelle), anglais (bilingue), portugais (très bon niveau) et allemand (niveau B1). Mon année en Chine m'a aussi habitué à travailler dans un environnement international.",
   },
   {
     id: "contact",
@@ -55,7 +67,7 @@ const intents: Intent[] = [
 ];
 
 const fallback =
-  "Je n'ai pas de réponse précise à cela, mais essayez : « Quelle est ta stack ? », « Parle-moi de Guardian » ou « Comment te contacter ? ».";
+  "Je n'ai pas de réponse précise à cela, mais essayez : « Quelle est ta stack ? », « Ton parcours à l'étranger ? » ou « Comment te contacter ? ».";
 
 /** Retire accents, ponctuation et majuscules pour comparer des mots simples. */
 function normalize(text: string): string[] {
@@ -83,6 +95,7 @@ export const suggestions = [
   "Qui es-tu ?",
   "Ton expérience en IA ?",
   "Parle-moi de Guardian",
+  "Ton parcours à l'étranger ?",
   "Quelle est ta stack ?",
   "Comment te contacter ?",
 ];

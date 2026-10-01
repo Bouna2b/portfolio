@@ -132,7 +132,10 @@ export const education: Education[] = [
   },
 ];
 
+// `value` (0-100) pilote la longueur de la barre de niveau affichée sur le site.
 export const languages = [
-  { name: "Français", level: "Langue maternelle" },
-  { name: "Anglais", level: "Bilingue" },
+  { name: "Français", level: "Langue maternelle", value: 100 },
+  { name: "Anglais", level: "Bilingue", value: 95 },
+  { name: "Portugais", level: "Très bon niveau", value: 80 },
+  { name: "Allemand", level: "B1", value: 50 },
 ];

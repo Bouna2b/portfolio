@@ -169,7 +169,7 @@ export function EducationSection() {
                   <span className="text-muted">{l.level}</span>
                 </div>
                 <div className="mt-2 h-1.5 rounded-full bg-surface-2">
-                  <div className="h-full w-full rounded-full bg-gradient-to-r from-accent to-accent-2" />
+                  <div className="h-full rounded-full bg-gradient-to-r from-accent to-accent-2" style={{ width: `${l.value}%` }} />
                 </div>
               </div>
             ))}
@@ -204,9 +204,8 @@ export function ContactSection() {
           </a>
         </div>
       </Reveal>
-      <footer className="mt-12 flex flex-col items-center justify-between gap-2 text-xs text-muted sm:flex-row">
+      <footer className="mt-12 text-center text-xs text-muted">
         <span>© {new Date().getFullYear()} {profile.name}</span>
-        <span className="font-mono">Construit avec Next.js · hébergé sur Vercel</span>
       </footer>
     </section>
   );
